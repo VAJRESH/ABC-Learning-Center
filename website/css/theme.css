@@ -1,0 +1,9 @@
+:root{
+    --nav-box-shadow-color: rgb(173, 173, 173);
+    --footer-bg-color: rgb(187, 187, 187);
+    --cards-box-shadow-color: rgb(146, 141, 141);
+    --instructor-font-color: rgb(104, 96, 96);
+    --button-font-color: rgb(65, 52, 52);
+    --contact-us-faqs-para: rgb(226, 226, 226);
+    --contact-us-form-box-shadow: rgb(145, 144, 144);
+}

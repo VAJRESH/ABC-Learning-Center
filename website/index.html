@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- meta descriptions -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>ABC Learning Center</title>
+
+    <!-- external files -->
+    <link rel="icon" href="images/favicon.png" type="image/png">
+
+    <!-- all pages style -->
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="./pages/home/home.css">
+    <link rel="stylesheet" href="./pages//about-us/about-us.css">
+
+    <!-- font awesome icons -->
+    <script src="https://kit.fontawesome.com/77ffb54878.js" crossorigin="anonymous"></script>
+
+    <!-- js file -->
+    <script defer src="./js/main.js"></script>
+    <script defer src="index.js"></script>
+</head>
+<body>
+    <section class="nav-container">
+        <nav class="navbar">
+            <ul>
+                <li class="nav-item" id="nav-logo">
+                    <img class="logo" src="./images/favicon.png" alt="Logo">
+                </li>
+                <li class="nav-link" aria-label="home"> Home </li>
+                <li class="nav-link" aria-label="about-us"> About Us </li>
+                <li class="nav-link" aria-label="contact-us"> Contact Us </li>
+                <li class="nav-link" aria-label="site-map"> Sitemap </li>
+                <li class="nav-link" aria-label="privacy-policy"> Privacy Policy </li>
+                
+                <li class="nav-item">
+                    <button class="nav-link" id="dropdown-btn">Explore</button>
+                    <ul id="dropdown-list" class="list">
+                        <li aria-label="course-listing#web-dev"> Web Development </li>
+                        <li aria-label="course-listing#programming-basics"> Programming Languages </li>
+                        <li aria-label="course-listing#others"> Others </li>
+                    </ul>
+                </li>
+
+            </ul>
+            <section class="dark-mode-container">
+                <span class="dark-mode-title">Dark Mode</span>
+                <label class="toggle-btn">
+                    <input type="checkbox" id="dark-mode-toggle">
+                    <span class="slider"></span>
+                </label>
+            </section>
+        </nav>
+    </section>
+
+    <header>
+        <h1 class="nav-link" id="home"> ABC Learning Center </h1>
+        <button id="back-btn">Back</button>
+    </header>
+    
+    <!-- div where all others pages get loaded dynamically -->
+    <div id="root"></div>
+
+    <footer>
+        <span>
+            <span class="social-icons">
+                <h6 class="social-title">Social Media Handles</h6>
+                <a href="https://twitter.com">
+                    <i class="fab fa-twitter" aria-hidden="true"></i>
+                    Twitter
+                </a>
+                <a href="https://facebook.com">
+                    <i class="fab fa-facebook" aria-hidden="true"></i>
+                    Facebook
+                </a>
+                <a href="https://youtube.com">
+                    <i class="fab fa-youtube" aria-hidden="true"></i>
+                    YouTube
+                </a>
+                <a href="https://instagram.com">
+                    <i class="fab fa-instagram" aria-hidden="true"></i>
+                    Instagram
+                </a>
+                <a href="https://in.linkedin.com/">
+                    <i class="fab fa-linkedin-in" aria-hidden="true"></i>
+                    Linked-In
+                </a>
+                <a href="hhttps://discord.com/">
+                    <i class="fab fa-discord" aria-hidden="true"></i>
+                    Discord
+                </a>
+                <a href="https://web.whatsapp.com/">
+                    <i class="fab fa-whatsapp" aria-hidden="true"></i>
+                    Whatsapp
+                </a>
+            </span>
+
+            <span class="legal">
+                <h6>Legal</h6>
+                <a href="privacy-policy.html">Privacy Policy</a>
+                <a href="privacy-policy.html">Terms and Conditions</a>
+            </span>
+        </span>
+        
+        <span class="bottom">
+            <span><a href="index.html"><img class="logo" src="./images/favicon.png" alt="Logo">ABC Learning Center</a></span>
+            <span>@2021 ABC Inc. All rights reserved.</span>
+        </span>
+    </footer>
+
+
+</body>
+</html>

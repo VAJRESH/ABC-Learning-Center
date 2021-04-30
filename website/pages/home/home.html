@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <script src="../../index.js"></script>
+    </head>
+    <body>
+        <main class="main" id="home">
+            <img class="background-image" src="../../images/intro-poster.png" alt="" loading='lazy' />
+            
+            <div class="courses-section">
+                <h2 onclick="goToNewPage('course-listing')">Courses Available</h2>
+
+                <section class="card-container">
+                    <div class="cards" id="html">
+                        <img src="./images/html-css-basics.png" alt="HTML and CSS"  loading='lazy' />
+                        <article>
+                            <h3>Complete HTML and CSS Course</h3>
+                            <p class="instructor">Instructor: Tim Berners-Lee</p>
+                            <p class="ratings">
+                                <span class="checked">4</span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star"></span>
+                            </p>
+                            <p class="price">&#8377; 500</p>
+                        </article>
+
+                        <section class="card-buttons">
+                            <button><i class="fas fa-share-alt"></i></button>
+                            <a href="./html-course-details.html">
+                                <button>Enroll Now</button>
+                            </a>
+                        </section>
+                    </div>
+
+                    <div class="cards" id="javascript">
+                        <img src="./images/javascript-basics.jpg" alt="JavaScript" loading='lazy' />
+                        <article>
+                            <h3>Learn JavaScript From Experts</h3>
+                            <p class="instructor">Instructor: Brenden Eich</p>
+                            <p class="ratings">
+                                <span class="checked">5</span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                            </p>
+                            <p class="price">
+                                <s>&#8377; 5000</s>
+                                <span>&#8377; 2500</span>
+                                <span class="sale">Sale 50%</span>
+                            </p>
+                        </article>
+                        <section class="card-buttons">
+                            <button><i class="fas fa-share-alt"></i></button>
+                            <button>Enroll Now</button>
+                        </section>
+                    </div>
+
+                    <div class="cards" id="java">
+                        <img src="./images/Java-Basics.jpg" alt="Java" loading='lazy' />
+                        <article>
+                            <h3> Complete Java Guide For Beginners </h3>
+                            <p class="instructor">Instructor: James Gosling</p>
+                            <p class="ratings">
+                                <span class="checked">4</span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star"></span>
+                            </p>
+                            <p class="price">&#8377; 5000</p>
+                        </article>
+                        <section class="card-buttons">
+                            <button><i class="fas fa-share-alt"></i></button>
+                            <button>Enroll Now</button>
+                        </section>
+                    </div>
+
+                    <div class="cards" id="office">
+                        <img src="./images/MS-Office.jpg" alt="MS-Office" loading='lazy' />
+                        <article>
+                            <h3>MS-Office Beginners to Advanced</h3>
+                            <p class="instructor">Instructor: Bill Gates</p>
+                            <p class="ratings">
+                                <span class="checked">2</span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                            </p>
+                            <p class="price">&#8377; 1000</p>
+                        </article>
+                        <section class="card-buttons">
+                            <button><i class="fas fa-share-alt"></i></button>
+                            <button>Enroll Now</button>
+                        </section>
+                    </div>
+
+                    <div class="cards" id="basics">
+                        <img src="./images/programming-basics.jpg" alt="Programming Basics" loading='lazy' />
+                        <article>
+                            <h3>Programming Basics Getting Started</h3>
+                            <p class="instructor">Instructor: Quincy Larsen</p>
+                            <p class="ratings">
+                                <span class="checked">4</span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star"></span>
+                            </p>
+                            <p class="price">&#8377; 2000</p>
+                        </article>
+                        <section class="card-buttons">
+                            <button><i class="fas fa-share-alt"></i></button>
+                            <button>Enroll Now</button>
+                        </section>
+                    </div>
+
+                    <div class="cards" id="c">
+                        <img src="./images/c-sharp-basics.png" alt="C-Sharp" loading='lazy' />
+                        <article>
+                            <h3>C-Sharp Framework (.Net) Basics</h3>
+                            <p class="instructor">Instructor: Jeff Atwood</p>
+                            <p class="ratings">
+                                <span class="checked">3</span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                            </p>
+                            <p class="price">&#8377; 10000</p>
+                        </article>
+                        <section class="card-buttons">
+                            <button><i class="fas fa-share-alt"></i></button>
+                            <button>Enroll Now</button>
+                        </section>
+                    </div>
+
+                </section>
+            </div>
+
+            <div class="more-courses-btn">
+                <button onclick="goToNewPage('course-listing')">More Courses</button>
+            </div>
+
+            <div class="features">
+                <h2>Learn And Be Job Ready With Us</h2>
+                <div class="feature-card-container">
+                    <section class="feature-cards">
+                        <img src="images/skills.jpg" alt="skill-img" loading='lazy' />
+                        <h3>Learn Latest Skills</h3>
+                        <p>such as MS-Office, Java, JavaScript, C-Sharp.</p>
+                    </section>
+    
+                    <section class="feature-cards">
+                        <img src="images/job-ready.jpg" alt="career-img" loading='lazy' />
+                        <h3>Start a new Career</h3>
+                        <p>in high-demand fields like IT, AI, etc.</p>
+                    </section>
+    
+                    <section class="feature-cards">
+                        <img src="images/degree.jpg" alt="degree-img" loading='lazy' />
+                        <h3>Earn a Degree</h3>
+                        <p>from reputed Universities.</p>
+                    </section>
+    
+                    <section class="feature-cards">
+                        <img src="images/community.jpg" alt="community-img" loading='lazy' />
+                        <h3>Join Community</h3>
+                        <p>of like minded people.</p>
+                    </section>
+                </div>
+            </div>
+        </main>
+    </body>
+</html>
