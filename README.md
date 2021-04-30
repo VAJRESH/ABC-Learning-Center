@@ -1,2 +1,6 @@
 # ABC-Learning-Center
-A repo that will contain all the source code and files related to my assignment and project.
+
+## Mini Project 1
+
+This branch has all the files related to mini project 1.
+Inside the folder, I have a ppt which has screenshot of the webpages and a folder which contains the website source code
