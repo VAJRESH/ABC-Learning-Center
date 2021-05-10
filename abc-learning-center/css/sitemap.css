@@ -1,0 +1,17 @@
+/* sitemap */
+#site-map section{
+    text-align: left;
+    margin: 10px;
+}
+#site-map section ul{
+    margin: 10px 40px;
+}
+.map{
+    position: absolute;
+    top: 80vh;
+    right: 10px;
+}
+.map img{
+    width: 60vw;
+}
+

@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- meta descriptions -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>ABC Learning Center</title>
+
+    <!-- icon link -->
+    <link rel="icon" href="images/favicon.png" type="image/png">
+
+    <!-- all style -->
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/courses.css">
+
+    <!-- font awesome icons -->
+    <script src="https://kit.fontawesome.com/77ffb54878.js" crossorigin="anonymous"></script>
+
+    <!-- js file -->
+    <!-- jquery for tabs -->
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script>
+        $( function() {
+          $( "#tabs" ).tabs();
+        } );
+    </script>
+    <script defer src="index.js"></script>
+</head>
+<body>
+    <!-- header loaded by javascript -->
+    <header id="header"></header>
+    <main class="center" id="html-course-details">
+
+        <section>
+            <img src="./images/html-css-basics.png" alt="HTML" />
+            <div class="details">
+                <h3>Complete HTML and CSS Course</h3> 
+                <p class="instructor">Instructor: Tim Berners-Lee</p>
+                <p class="ratings">
+                    <span class="checked">4</span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star"></span>
+                </p>
+                <article class="small-details">
+                    <em class="price">&#8377; 500</em>
+                    <em>Conducted on 12 March, 2021</em>
+                    <em>Language: English</em>
+                </article>
+                <section>
+                    <em>3 Weeks Long</em>
+                    <a href="./course-schedule.html">
+                        <button>Schedule Details</button>
+                    </a>
+                </section>
+            </div>
+        </section> 
+        <div id="tabs">
+            <ul>
+                <li><a href="#tabs-1">About</a></li>
+                <li><a href="#tabs-2">Details</a></li>
+                <li><a href="#tabs-3">Instructor and Ratings</a></li>
+            </ul>
+            <div id="tabs-1">
+                <section>
+                    <h3>Aim</h3>
+                    <article>
+                        Become a frontend web developer with HTML CSS.
+                        This course introduces students to basic web design using HTML (Hypertext Markup Language) and 
+                        CSS (Cascading Style Sheets). ... Enhance web pages using text formatting, color, graphics, images, and multimedia. 
+                        Incorporate forms into web pages. Understand and apply CSS to format web page elements.
+                    </article>
+                </section>
+                <section>
+                    <h3>5 in 1 Course</h3>
+                    <em>Learn HTML</em>
+                    <em>Learn CSS</em>
+                    <em>Learn about Web Design</em>
+                    <em>Learn about Wireframes and Prototypes</em>
+                    <em>Learn about VS Code</em>
+                </section>
+                <section>
+                    <h3>What you'll learn</h3>
+                    <p>In this course, we'll create a simple "Coming Soon" webpage using valid HTML5 and CSS3 code</p>
+                    <p>We'll focus on WHY the code we write looks the way it does –– so you can develop an intuitive understanding of how HTML and CSS work</p>
+                    <p>By the end of this course, you'll be able to use HTML and CSS with confidence, following best practices every step of the way!</p>
+                </section>
+                <section>
+                    <h3>Requirements</h3>
+                    <ul>
+                        <li>A computer (Windows, Mac, or Linux) with Internet access</li>
+                        <li>Any modern web browser (Chrome, Firefox, Internet Explorer, Opera, or Safari)</li>
+                        <li>Some basic computer skills (cutting and pasting text, saving files into folders)</li>
+                        <li>A desire to learn!</li>
+                    </ul>
+                </section>
+            </div>
+            <div id="tabs-2">
+                <section>
+                    <h3>Description</h3>
+                    <article>
+                        <p>
+                            Want to learn how to create webpages, 
+                            but feeling intimidated by HTML and CSS? 
+                            Not sure where to start? Step-by-step HTML and CSS for 
+                            Absolute Beginners is a comprehensive and friendly course designed for beginners 
+                            with NO previous coding or programming experience.
+                        </p>
+                        <ul>
+                            <li>
+                                HTML (HyperText Markup Language) and CSS (Cascading Style Sheets) are the building blocks of the web. 
+                                If you've ever looked at a website, you've seen HTML and CSS in action!
+                            </li>
+                        </ul>
+                        <p>
+                            Whether you want to make changes to your website's template, create new webpages from scratch, or 
+                            just understand what you're doing when you cut-and-paste embed codes from sites like YouTube or SlideShare — 
+                            understanding HTML and CSS makes it possible.
+                        </p>
+                    </article>
+                </section>
+                <section>
+                    <h3>
+                        HOW IS THIS COURSE DIFFERENT?
+                    </h3>
+                    <p>
+                        My name is Tim, and I've been teaching technology to beginners 
+                        under the ABC Learing Center! since 2009. 
+                        I believe that with the right approach, anyone can learn anything.
+                    </p>
+                    <p>
+                        <strong>
+                            My goal in this course is to help you develop
+                            an intuitive understanding of how HTML and CSS work.
+                        </strong>
+                        In this course, we'll create a simple "Coming Soon" webpage 
+                        using valid HTML5 and CSS3 code. As we work together, 
+                        I'll explain WHY the code we write looks the way it does. 
+                        I'll point out the simple patterns in the code, 
+                        so you can learn more quickly and with more confidence.
+                    </p>
+                    <ul class="benifits">
+                        <p>
+                            As we build our webpage, we'll cover:
+                        </p>
+                        <li>
+                            What tools you need to write HTML and CSS, 
+                            and how to use them
+                        </li>
+                        <li>
+                            How to use HTML to organize and 
+                            manage the content of your webpage
+                        </li>
+                        <li>
+                            How to use CSS to control the presentation or 
+                            "look" of your webpage
+                        </li>
+                        <li>
+                            How web publishing works, and 
+                            how to get your HTML and CSS files from your computer onto the web
+                        </li>
+                        <li>
+                            How to use lots of other helpful and free web building tools, 
+                            including code validators, free icon libraries, color scheme generators and more
+                        </li>
+                    </ul>
+                    <p>
+                        <strong>
+                            By the end of this course, 
+                            you'll be able to use HTML and CSS with confidence, 
+                            following best practices every step of the way.
+                        </strong>
+                    </p>
+                </section>
+                <section>
+                    <h3>Students Response</h3>
+                    <h6>Here's just a sample of what my (awesome!) students have to say about this course:</h6>
+                    <p>"My favorite part was learning how to tilt images and add drop shadows. Also, the instructor cares enough to answer questions promptly. Can't say enough good things about this course!" —R.B.</p>
+                    <p>"Very accurate and detailed explanations with real time examples. For me it was a big step ahead..." —Mihai E.</p>
+                    <p>"[Kathleen] knows exactly the info to deliver and what to leave out to avoid confusion." —Tara</p>
+                    <p>"What I once thought would be overwhelming to learn is surprisingly quite straight forward." —Odette</p>
+                    <p>"This course finally made CSS make sense to me." —Julie G.</p>
+                    <p>"Thank you, Tim, for a wonderful course! Never thought coding could be made fun." —Leslie V.</p>
+                    
+                </section>
+                <section>
+                    <h3>WHAT'S INCLUDED?</h3>
+                    <ul>
+                        <li>
+                            Short quizzes at the end of each section will help you gauge your own understanding and check your progress along the way.
+                        </li>
+                        <li>
+                            This course includes lifetime access to 4 hours of step-by-step videos. 
+                            You'll also get supplementary text lectures, links to helpful resources, HTML and CSS code examples, 
+                            and downloadable project files.
+                        </li>
+                    </ul>
+                </section>
+            </div>
+            <div id="tabs-3">
+                <section class="instructor">
+                    <h3>Instructor</h3>
+                    <div class='instructor-card'>
+                        <img src="./images/tim.jpg" alt="Tim">
+                        <h4>Tim Berners-Lee</h4>
+                        <p>Instructor Rating: <span>4/5</span></p>
+                        <h6>Developer</h6>
+                        <em>5 Courses</em>
+                    </div>
+                </section>
+                <section class="review-section">
+                    <h3>
+                        <span class="heading">User Rating</span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star"></span>
+                    </h3>
+                    <p>4.1 average based on 254 reviews.</p>
+                    <hr style="border:3px solid #f1f1f1">
+                    
+                    <div class="row">
+                    <div class="side">
+                        <div>5 star</div>
+                    </div>
+                    <div class="middle">
+                        <div class="bar-container">
+                        <div class="bar-5"></div>
+                        </div>
+                    </div>
+                    <div class="side right">
+                        <div>150</div>
+                    </div>
+                    <div class="side">
+                        <div>4 star</div>
+                    </div>
+                    <div class="middle">
+                        <div class="bar-container">
+                        <div class="bar-4"></div>
+                        </div>
+                    </div>
+                    <div class="side right">
+                        <div>63</div>
+                    </div>
+                    <div class="side">
+                        <div>3 star</div>
+                    </div>
+                    <div class="middle">
+                        <div class="bar-container">
+                        <div class="bar-3"></div>
+                        </div>
+                    </div>
+                    <div class="side right">
+                        <div>15</div>
+                    </div>
+                    <div class="side">
+                        <div>2 star</div>
+                    </div>
+                    <div class="middle">
+                        <div class="bar-container">
+                        <div class="bar-2"></div>
+                        </div>
+                    </div>
+                    <div class="side right">
+                        <div>6</div>
+                    </div>
+                    <div class="side">
+                        <div>1 star</div>
+                    </div>
+                    <div class="middle">
+                        <div class="bar-container">
+                        <div class="bar-1"></div>
+                        </div>
+                    </div>
+                    <div class="side right">
+                        <div>20</div>
+                    </div>
+                    </div>
+                </section>
+            </div>
+            <div>
+                <h6 class="price">&#8377; 500</h6>
+                <a href="./registration-page.html">
+                    <button class="buy-button">Buy Now</button>
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <!-- footer loaded by javascript -->
+    <footer id="footer"></footer>
+</body>
+</html>
