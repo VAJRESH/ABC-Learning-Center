@@ -9,6 +9,10 @@ form{
     border-radius: 10px;
     box-shadow: 0 0 10px black;
 }
+form fieldset{
+    border: transparent;
+    outline: transparent;
+}
 form section{
     font-weight: bolder;
     display: grid;
@@ -44,11 +48,14 @@ section{
 }
 .viewPasswordBtn{
     width: 50px;
+    height: 100%;
     border: transparent;
     outline: transparent;
     position: absolute;
+    align-items: baseline;
     right: 0;
-    bottom: 0px;
+    bottom: -10px;
+    background-color: transparent;
 }
 .error{
     position: absolute;

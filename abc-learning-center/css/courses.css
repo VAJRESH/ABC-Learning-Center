@@ -17,9 +17,6 @@ em{
 .checked {
   color: orange;
 }
-.center{
-  text-align: center;
-}
 main > section{
   display: grid;
   grid-template-columns: auto auto;
@@ -50,7 +47,7 @@ img[alt='HTML']{
   position: sticky;
   top: 55px;
 }
-#tabs > ul > li{
+#tabs ul li{
   list-style-type: none;
   font-weight: bold;
   margin-bottom: -1px;
@@ -61,8 +58,11 @@ li a{
 }
 #tabs > div{
   background-color: #eaebe7;
-  text-align: center;
+  text-align: left;
   padding: 20px;
+}
+#tabs div :is(:not(h3)){
+  padding-left: 10px;
 }
 .ui-tabs-active a{
   color: #00bcd4;
@@ -82,7 +82,6 @@ li a{
 .benifits{
   width: 70vw;
   text-align: left;
-  margin: auto;
 }
 
 /* instructor */

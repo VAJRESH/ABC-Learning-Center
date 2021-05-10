@@ -18,7 +18,6 @@
     <!-- font awesome icons -->
     <script src="https://kit.fontawesome.com/77ffb54878.js" crossorigin="anonymous"></script>
 
-    <!-- js file -->
     <!-- jquery for tabs -->
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
@@ -27,12 +26,14 @@
           $( "#tabs" ).tabs();
         } );
     </script>
-    <script defer src="index.js"></script>
+
+    <!-- js file -->
+    <script defer src="./js/index.js"></script>
 </head>
 <body>
     <!-- header loaded by javascript -->
     <header id="header"></header>
-    <main class="center" id="html-course-details">
+    <main id="html-course-details">
 
         <section>
             <img src="./images/html-css-basics.png" alt="HTML" />
@@ -72,7 +73,7 @@
                     <article>
                         Become a frontend web developer with HTML CSS.
                         This course introduces students to basic web design using HTML (Hypertext Markup Language) and 
-                        CSS (Cascading Style Sheets). ... Enhance web pages using text formatting, color, graphics, images, and multimedia. 
+                        CSS (Cascading Style Sheets). Enhance web pages using text formatting, color, graphics, images, and multimedia. 
                         Incorporate forms into web pages. Understand and apply CSS to format web page elements.
                     </article>
                 </section>
@@ -179,7 +180,7 @@
                 </section>
                 <section>
                     <h3>Students Response</h3>
-                    <h6>Here's just a sample of what my (awesome!) students have to say about this course:</h6>
+                    <h4>Here's just a sample of what my (awesome!) students have to say about this course:</h4>
                     <p>"My favorite part was learning how to tilt images and add drop shadows. Also, the instructor cares enough to answer questions promptly. Can't say enough good things about this course!" —R.B.</p>
                     <p>"Very accurate and detailed explanations with real time examples. For me it was a big step ahead..." —Mihai E.</p>
                     <p>"[Kathleen] knows exactly the info to deliver and what to leave out to avoid confusion." —Tara</p>
@@ -285,7 +286,7 @@
                 </section>
             </div>
             <div>
-                <h6 class="price">&#8377; 500</h6>
+                <h3 class="price">&#8377; 500</h3>
                 <a href="./registration-page.html">
                     <button class="buy-button">Buy Now</button>
                 </a>

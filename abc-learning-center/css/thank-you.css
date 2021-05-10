@@ -4,12 +4,14 @@ body{
 main{
     display: flex;
     justify-content: space-around;
+    align-items: center;
+    height: 70vh;
 }
 main > div{
     padding: 3.1rem 1rem;
     text-align: center;
 }
-button{
+main button{
     background-color: rgb(82, 247, 41);
     border-radius: 10px;
     font-weight: 500;
