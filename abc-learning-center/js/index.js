@@ -89,6 +89,7 @@ function darkTheme(){
     root.style.setProperty('--instructor-font-color', 'rgb(230, 211, 211)');
     root.style.setProperty('--light-gray', 'rgb(78, 76, 76)');
     root.style.setProperty('--instructor-card', 'rgb(80, 86, 86)');
+    root.style.setProperty('--border-color', 'rgb(226, 226, 226)');
 }
 
 function lightTheme(){
