@@ -5,6 +5,7 @@
     grid-template-columns: auto auto;
     margin-top: 3rem;
     align-items: center;
+    margin: 10px;
 }
 .vision article{
     width: 50vw;
@@ -27,7 +28,8 @@ div img{
     grid-column: 1/4;
 }
 .team-cards{
-    border: 1px solid gray;
+    border: 1px solid var(--border-color);
+    background-color: var(--light-bg-color);
     border-radius: 10px;
     width: 20vw;
     box-shadow: 0px 0px 10px var(--contact-us-form-box-shadow);

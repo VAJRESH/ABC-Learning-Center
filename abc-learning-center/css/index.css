@@ -1,11 +1,16 @@
 :root{
-    --nav-box-shadow-color: rgb(173, 173, 173);
-    --footer-bg-color: rgb(187, 187, 187);
+    --nav-box-shadow: 0px 5px 5px rgb(173, 173, 173);
+    --bg-color: #fff;
+    --text-color: #000;
+    --light-gray: rgb(226, 226, 226);
+    --light-bg-color: rgb(236, 236, 236);
     --cards-box-shadow-color: rgb(146, 141, 141);
     --instructor-font-color: rgb(104, 96, 96);
     --button-font-color: rgb(65, 52, 52);
-    --contact-us-faqs-para: rgb(226, 226, 226);
     --contact-us-form-box-shadow: rgb(145, 144, 144);
+    --light-blue: #1690d6;
+    --border-color: rgb(94, 54, 54);
+    --instructor-card: #b1dfaf;
 }
 
 /* contains all the styles for all the components across the pages  */
@@ -22,6 +27,8 @@ html {
 body{
     position: relative;
     min-width: 200px;
+    background-color: var(--bg-color);
+    color: var(--text-color);
 }
 
 .link{
@@ -31,11 +38,12 @@ body{
 header{
     text-align: center;
     margin-bottom: 1em;
+    color: var(--text-color);
 }
-/* dark mode colors */
-/* background-color: rgb(63, 62, 62);
-color: rgb(223, 223, 223); */
-
+nav{
+    background-color: var(--light-bg-color);
+    color: var(--text-color);
+}
 .dark-mode-container{
     display: flex;
     width: fit-content;
@@ -96,16 +104,19 @@ input:checked + .slider::before{
     position: sticky;
     top: 0;
     z-index: 1;
-    background-color: rgb(255, 255, 255);
+    /* background-color: rgb(255, 255, 255); */
+    background-color: var(--light-bg-color);
+    color: var(--text-color);
 }
 .nav-container{
     text-align: center;
     margin-bottom: 0.5em;
-    box-shadow: 0px 5px 5px var(--nav-box-shadow-color);
+    box-shadow: var(--nav-box-shadow);
 }
 .menu-btn{
     display: none;
     visibility: hidden;
+    color: var(--text-color);
 }
 .navbar{
     display: grid;
@@ -123,6 +134,8 @@ input:checked + .slider::before{
 .nav-link{
     list-style: none;
     cursor: pointer;
+    background-color: var(--light-bg-color);
+    color: var(--text-color);
 }
 .logo{
     height: 40px;
@@ -130,10 +143,11 @@ input:checked + .slider::before{
 }
 #dropdown-btn{
     border-radius: 50px;
-    background-color: #1690d6;
-    font-weight: 600;
+    background-color: var(--light-blue);
     color: rgb(255, 255, 255);
+    font-weight: 600;
     padding: 10px;
+    margin: 5px;
 }
 #dropdown-list{
     position: absolute;
@@ -151,7 +165,7 @@ input:checked + .slider::before{
 }
 #back-btn{
     position: fixed;
-    top: 60px;
+    top: 65px;
     right: 10px;
     border-radius: 10px;
     padding: 5px 10px;
@@ -252,18 +266,20 @@ nav a:hover{
     margin: 3rem auto 2rem;
     padding: 0 1em;
 }
-.courses-heading{
+.courses-heading, .courses-section a[href='./course-listing.html']{
     text-decoration: none;
-    color: #000;
+    color: var(--text-color);
     margin: 3rem auto 1rem 1rem;
 }
 .card-container{
-    display: grid;
-    grid-template-columns: auto auto auto;
+    display: flex;
+    flex-wrap: wrap;
     text-align: center;
-    grid-gap: 1em;
-
+    justify-content: space-evenly;
 }
+#course-listing .card-container{
+    justify-content: flex-start;
+} 
 .cards > img{
     width: 100%;
     height: 150px;
@@ -271,10 +287,11 @@ nav a:hover{
 .cards{
     display: grid;
     padding: 1em;
-    margin: 1em auto;
+    margin: 1em;
     text-align: left;
-    border: 1px solid rgb(94, 54, 54);
+    border: 1px solid var(--border-color);
     box-shadow: 0px 0px 10px var(--cards-box-shadow-color);
+    background-color: var(--light-bg-color);
     border-radius: 5px;
     max-width: 300px;
 }
@@ -309,7 +326,7 @@ nav a:hover{
 .courses-section button{
     padding: 10px;
     background-color: transparent;
-    color: var(--button-font-color);
+    color: var(--text-color);
 }
 .more-courses-btn{
     margin-bottom: 1.5rem;
@@ -318,7 +335,7 @@ nav a:hover{
 
 
 footer{
-    background-color: var(--footer-bg-color);
+    background-color: var(--light-bg-color);
     margin-top: 50px;
     padding: 20px 15px 10px;
 }
@@ -326,6 +343,11 @@ footer{
     display: flex;
     text-align: center;
     justify-content: space-between;
+}
+footer a{
+    color: var(--text-color);
+    text-decoration: none;
+    margin: 2px 5px;
 }
 .link-title{
     font-size: 1.2rem;

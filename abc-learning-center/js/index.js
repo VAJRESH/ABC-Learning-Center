@@ -18,14 +18,14 @@ function getComponent(component) {
 // explore button hover effect
 const dropdownBtn = document.getElementById('dropdown-btn');
 const dropdownList = document.getElementById('dropdown-list');
-
-dropdownList.addEventListener('mouseleave', () => {
+const handler = (e) => {
     dropdownList.classList.toggle('list');
-});
+    if(!dropdownList.classList.contains('list')){
+        setTimeout(handler, 3000);
+    }
+};
 
-dropdownBtn.addEventListener('mouseenter', () => {
-    dropdownList.classList.toggle('list');
-});
+dropdownBtn.addEventListener('click', handler);
 
 
 
@@ -53,6 +53,7 @@ menuBtn.addEventListener('click', () => {
 
 // dark mode switch
 const darkModeSwitch = document.getElementById('dark-mode-toggle');
+const root = document.documentElement;
 
 // checks weather dark mode is activated or not
 darkMode();
@@ -62,9 +63,11 @@ darkModeSwitch.addEventListener('change', () => {
     document.body.classList.toggle('dark-theme');
     if(document.body.classList.value === "dark-theme"){
         localStorage.setItem('darkTheme', true);
+        darkTheme();
     }
     if(document.body.classList.value === ""){
         localStorage.clear();
+        lightTheme();
     }
 });
 
@@ -72,9 +75,32 @@ function darkMode() {
     if(localStorage.getItem('darkTheme')){
         darkModeSwitch.checked = 'true';
         document.body.classList.toggle('dark-theme');
+        darkTheme();
+    } else{
+        lightTheme();
     }
 }
 
+function darkTheme(){
+    root.style.setProperty('--bg-color', 'rgb(120, 120, 120)');
+    root.style.setProperty('--text-color', '#fff');
+    root.style.setProperty('--nav-box-shadow', '0px 2px 1px rgb(228, 228, 228)');
+    root.style.setProperty('--light-bg-color', 'rgb(40, 40, 40)');
+    root.style.setProperty('--instructor-font-color', 'rgb(230, 211, 211)');
+    root.style.setProperty('--light-gray', 'rgb(78, 76, 76)');
+    root.style.setProperty('--instructor-card', 'rgb(80, 86, 86)');
+}
+
+function lightTheme(){
+    root.style.setProperty('--text-color', '#000');
+    root.style.setProperty('--bg-color', '#fff'); 
+    root.style.setProperty('--light-bg-color', 'rgb(236, 236, 236)');
+    root.style.setProperty('--nav-box-shadow', '0px 5px 5px rgb(173, 173, 173)');
+    root.style.setProperty('--instructor-font-color', 'rgb(104, 96, 96)');
+    root.style.setProperty('--instructor-card', '#b1dfaf');
+    root.style.setProperty('--border-color', 'rgb(94, 54, 54)');
+    root.style.setProperty('--light-gray', 'rgb(226, 226, 226)');
+}
 
 
 

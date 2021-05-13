@@ -3,9 +3,10 @@
     text-align: center;
 }
 section > article{
-    background-color: rgb(245, 245, 245);
+    background-color: var(--bg-color);
     margin: auto;
     width: 70vw;
+    padding: 5px;
     border: 1px solid black;
     border-radius: 10px;
     margin-bottom: 10px;

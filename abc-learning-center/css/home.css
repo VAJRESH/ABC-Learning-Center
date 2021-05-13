@@ -1,6 +1,6 @@
 /* home page */
 .features{
-    background-color: rgb(231, 231, 231);
+    background-color: var(--light-bg-color);
     padding-top: 2rem;
 }
 .feature-card-container{

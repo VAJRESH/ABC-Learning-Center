@@ -1,110 +1,135 @@
-details, summary{
-    border: transparent;
-    outline: transparent;
+details,
+summary {
+  border: transparent;
+  outline: transparent;
 }
-em{
-    display: block;
+
+em {
+  display: block;
+  font-style: normal;
 }
+
 .heading {
   font-size: 25px;
   margin-right: 25px;
 }
 
-.fa, .checked {
+.fa,
+.checked {
   font-size: 25px;
 }
 
 .checked {
   color: orange;
 }
-main > section{
+
+.center {
+  text-align: center;
+}
+.details button{
+  border-radius: 10px;
+  padding: 5px 10px;
+  margin: 1em 0;
+}
+main > section {
   display: grid;
   grid-template-columns: auto auto;
-  background-color: #d7dbdf;
+  background-color: var(--light-gray);
   margin: 20px;
   padding: 10px;
 }
-img[alt='HTML']{
+
+img[alt="HTML"] {
   margin: auto;
   width: 40vw;
   border: 5px solid black;
 }
 
 /* tabs */
-.buy-button{
+.buy-button {
   border-radius: 10px;
-  padding: 10px 20px;
-  background-color: #ff9800;
+  padding: 5px 20px;
+  background-color: #f8b653;
   color: #f44336;
   font-weight: bolder;
 }
-#tabs > ul{
+.price{
+  display: block;
+  margin: auto;
+}
+
+#tabs > ul {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  background-color: #575751;
+  background-color: var(--bg-color);
   margin-bottom: 0;
   position: sticky;
   top: 55px;
 }
-#tabs ul li{
+
+#tabs ul > li {
   list-style-type: none;
   font-weight: bold;
   margin-bottom: -1px;
   padding: 10px 20px;
 }
-li a{
-  color: #eaebe7;
+
+li a {
+  color: var(--text-color);
 }
-#tabs > div{
-  background-color: #eaebe7;
-  text-align: left;
+
+#tabs > div {
+  background-color: var(--light-bg-color);
+  text-align: center;
   padding: 20px;
 }
-#tabs div :is(:not(h3)){
-  padding-left: 10px;
-}
-.ui-tabs-active a{
+
+.ui-tabs-active a {
   color: #00bcd4;
 }
-#tabs .ui-tabs-active{
-  background-color: #eaebe7;
+
+#tabs .ui-tabs-active {
+  background-color: var(--light-bg-color);
   border-radius: 10px;
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
 }
 
-#tabs section{
+#tabs section {
   margin-bottom: 50px;
 }
 
 /* tab2 */
-.benifits{
+.benifits {
   width: 70vw;
   text-align: left;
+  margin: auto;
 }
 
 /* instructor */
-.instructor-card{
+.instructor-card {
   padding: 10px;
   border-radius: 10px;
   margin: auto;
   width: 40vw;
-  background-color: #b1dfaf;
+  background-color: var(--instructor-card);
 }
-.instructor-card img{
+
+.instructor-card img {
   border-radius: 50%;
   width: 200px;
   height: 200px;
 }
 
 /* user rating */
-.review-section{
+.review-section {
   width: 70vw;
   margin: auto;
-  background-color: #b9e6ec;
+  background-color: var(--instructor-card);
   padding: 50px;
 }
+
 /* Three column layout */
 .side {
   float: left;
@@ -139,17 +164,43 @@ li a{
 }
 
 /* Individual bars */
-.bar-5 {width: 60%; height: 18px; background-color: #4CAF50;}
-.bar-4 {width: 30%; height: 18px; background-color: #2196F3;}
-.bar-3 {width: 10%; height: 18px; background-color: #00bcd4;}
-.bar-2 {width: 4%; height: 18px; background-color: #ff9800;}
-.bar-1 {width: 15%; height: 18px; background-color: #f44336;}
+.bar-5 {
+  width: 60%;
+  height: 18px;
+  background-color: #4caf50;
+}
+
+.bar-4 {
+  width: 30%;
+  height: 18px;
+  background-color: #2196f3;
+}
+
+.bar-3 {
+  width: 10%;
+  height: 18px;
+  background-color: #00bcd4;
+}
+
+.bar-2 {
+  width: 4%;
+  height: 18px;
+  background-color: #ff9800;
+}
+
+.bar-1 {
+  width: 15%;
+  height: 18px;
+  background-color: #f44336;
+}
 
 /* Responsive layout - make the columns stack on top of each other instead of next to each other */
 @media (max-width: 400px) {
-  .side, .middle {
+  .side,
+  .middle {
     width: 100%;
   }
+
   /* Hide the right column on small screens */
   .right {
     display: none;
