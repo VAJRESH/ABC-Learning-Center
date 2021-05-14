@@ -1,17 +1,17 @@
 // inserts header and footer in every single page
-const header = document.getElementById('header');
-const footer = document.getElementById('footer');
+// const header = document.getElementById('header');
+// const footer = document.getElementById('footer');
 
-header.innerHTML = getComponent('header');
-footer.innerHTML = getComponent('footer');
+// header.innerHTML = getComponent('header');
+// footer.innerHTML = getComponent('footer');
 
-// returns a string of html from given path
-function getComponent(component) {
-    const ajaxRequest = new XMLHttpRequest();
-    ajaxRequest.open("GET", `./components/${component}.html`, false);
-    ajaxRequest.send();
-    return ajaxRequest.responseText;
-}
+// // returns a string of html from given path
+// function getComponent(component) {
+//     const ajaxRequest = new XMLHttpRequest();
+//     ajaxRequest.open("GET", `./components/${component}.html`, false);
+//     ajaxRequest.send();
+//     return ajaxRequest.responseText;
+// }
 
 
 

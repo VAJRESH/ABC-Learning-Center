@@ -4,14 +4,19 @@ main{
     text-align: center;
 }
 form{
-    background-color:rgb(205, 233, 194);
-    border: 5px outset rgb(65, 48, 48);
+    background-color: var(--bg-color);
+    border: 5px outset var(--border-color);
+    color: var(--text-color);
     border-radius: 10px;
+    text-align: center;
     box-shadow: 0 0 10px black;
 }
 form fieldset{
     border: transparent;
     outline: transparent;
+}
+form legend{
+    margin: auto;
 }
 form section{
     font-weight: bolder;
@@ -22,6 +27,7 @@ form section{
 }
 section input{
     border-radius: 10px;
+    outline: transparent;
     padding: 5px 10px;
     width: 100%;
 }
@@ -59,7 +65,8 @@ section{
 }
 .error{
     position: absolute;
-    background-color: rgb(235, 250, 32);
+    background-color: rgb(247 223 223);
+    color: #f00;
     margin-top: 5px;
     height: 30px;
     margin-left: 10px;
@@ -74,6 +81,6 @@ section{
     border: 15px solid transparent;
     position: relative;
     top: -35px; right: 10px;
-    border-bottom-color: rgb(235, 250, 32);
+    border-bottom-color: rgb(247 223 223);
     /* border-bottom-color: transparent; */
 }

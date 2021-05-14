@@ -20,11 +20,87 @@
     
         <!-- js file -->
         <script defer src="js/index.js"></script>
+    <script defer src="./js/validation.js"></script>
     </head>
     <body>
-        <!-- header loaded by javascript -->
-        <header id="header"></header>
-    
+    <header id="header">
+        <section class="nav-container">
+            <nav class="navbar">
+                <button class="menu-btn">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <ul class="nav-items">
+                    <a class="nav-link" href="index.html">
+                        <li class="nav-item" id="nav-logo">
+                            <img class="logo" src="./images/favicon.png" alt="Logo" />
+                        </li>
+                    </a>
+                    <a class="nav-link active" href="./index.html">
+                        <li class="nav-item">
+                            Home
+                        </li>
+                    </a>
+                    <a class="nav-link" href="./about-us.html">
+                        <li class="nav-item">
+                            About Us
+                        </li>
+                    </a>
+                    <a class="nav-link" href="./contact-us.html">
+                        <li class="nav-item">
+                            Contact Us
+                        </li>
+                    </a>
+                    <a class="nav-link" href="./course-listing.html">
+                        <li class="nav-item">
+                            Courses
+                        </li>
+                    </a>
+                    <a class="nav-link" href="./site-map.html">
+                        <li class="nav-item">
+                            Sitemap
+                        </li>
+                    </a>
+                    <a class="nav-link" href="./privacy-policy.html">
+                        <li class="nav-item">
+                            Privacy Policy
+                        </li>
+                    </a>
+                </ul>
+                <div class="nav-item">
+                    <button class="nav-link" id="dropdown-btn">Explore</button>
+                    <ul id="dropdown-list" class="list">
+                        <a class="nav-link" href="./course-listing.html#web-dev">
+                            <li>
+                                Web Development
+                            </li>
+                        </a>
+                        <a class="nav-link" href="./course-listing.html#programming-basics">
+                            <li>
+                                Programming Languages 
+                            </li>
+                        </a>
+                        <a class="nav-link" href="./course-listing.html#others">
+                            <li>
+                                Others
+                            </li>
+                        </a>
+                    </ul>
+                </div>
+                <section class="dark-mode-container">
+                    <span class="dark-mode-title">Dark Mode</span>
+                    <label class="toggle-btn">
+                        <input type="checkbox" id="dark-mode-toggle">
+                        <span class="slider"></span>
+                    </label>
+                </section>
+            </nav>
+        </section>
+
+        <h1 class="nav-link" id="home"> ABC Learning Center </h1>
+
+        <button id="back-btn">Back</button>
+
+    </header>
     <main>
         <form>
             <fieldset>
@@ -70,7 +146,59 @@
             </fieldset>
         </form>
     </main>
-    <footer id=footer></footer>
-    <script src="./js/validation.js"></script>
+    
+    
+    <footer id="footer">
+        <section class="link-container">
+    <div>
+        <h4 class="link-title">Social Media Handles</h4>
+        <span class="social-icons">
+            <a href="https://twitter.com">
+                <i class="fab fa-twitter"></i>
+                Twitter
+            </a>
+            <a href="https://facebook.com">
+                <i class="fab fa-facebook"></i>
+                Facebook
+            </a>
+            <a href="https://youtube.com">
+                <i class="fab fa-youtube"></i>
+                Youtube
+            </a>
+            <a href="https://instagram.com">
+                <i class="fab fa-instagram"></i>
+                Instagram
+            </a>
+            <a href="https://in.linkedin.com/">
+                <i class="fab fa-linkedin-in"></i>
+                Linked-In
+            </a>
+            <a href="hhttps://discord.com/">
+                <i class="fab fa-discord"></i>
+                Discord
+            </a>
+            <a href="https://web.whatsapp.com/">
+                <i class="fab fa-whatsapp"></i>
+                Whatsapp
+            </a>
+        </span>
+    </div>
+    <div>
+        <h4 class="link-title">Legal</h4>
+        <span class="legal">
+            <a href="privacy-policy.html">Privacy Policy</a>
+            <a href="privacy-policy.html">Terms and Conditions</a>
+        </span>
+    </div>
+</section>
+
+<span class="bottom">
+    <a href="index.html">
+        <img class="logo" src="./images/favicon.png" alt="Logo" />
+        ABC Learning Center
+    </a>
+    <span>@2021 ABC Inc. All rights reserved.</span>
+</span>
+    </footer>
 </body>
 </html>

@@ -327,6 +327,7 @@ nav a:hover{
     padding: 10px;
     background-color: transparent;
     color: var(--text-color);
+    border-color: var(--border-color);
 }
 .more-courses-btn{
     margin-bottom: 1.5rem;
