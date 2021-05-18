@@ -71,15 +71,13 @@ img[alt="HTML"] {
   justify-content: space-around;
   background-color: var(--bg-color);
   margin-bottom: 0;
-  position: sticky;
-  top: 55px;
+  align-items: center;
 }
 
 #tabs ul > li {
   list-style-type: none;
   font-weight: bold;
-  margin-bottom: -1px;
-  padding: 10px 20px;
+  padding: 2px;
 }
 
 li a {
@@ -88,8 +86,14 @@ li a {
 
 #tabs > div {
   background-color: var(--light-bg-color);
-  text-align: center;
+  text-align: justify;
+  display: grid;
+  align-items: center;
+  justify-content: center;
   padding: 20px;
+}
+#tabs div h1, h2, h3{
+  margin: 5px 50px;
 }
 
 .ui-tabs-active a {
@@ -101,6 +105,7 @@ li a {
   border-radius: 10px;
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
+  padding: 10px 20px;
 }
 
 #tabs section {
@@ -109,12 +114,15 @@ li a {
 
 /* tab2 */
 .benifits {
-  width: 70vw;
+  padding: 10px 20px;
   text-align: left;
   margin: auto;
 }
 
-/* instructor */
+/* tab 3 */
+#tabs-3 div, h1, h2, h3{
+  text-align: center;
+}
 .instructor-card {
   padding: 10px;
   border-radius: 10px;
