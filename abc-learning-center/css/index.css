@@ -279,6 +279,7 @@ nav a:hover{
 }
 #course-listing .card-container{
     justify-content: flex-start;
+    width: 100vw;
 } 
 .cards > img{
     width: 100%;

@@ -1,4 +1,11 @@
 /* home page */
+.more-courses-btn button{
+    padding: 10px 20px;
+    border-radius: 5px;
+    background-color: skyblue;
+    font-size: 1.2rem;
+}
+
 .features{
     background-color: var(--light-bg-color);
     padding-top: 2rem;

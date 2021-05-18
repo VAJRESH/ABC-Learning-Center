@@ -5,10 +5,16 @@
     grid-template-columns: auto auto;
     margin-top: 3rem;
     align-items: center;
+    justify-content: space-evenly;
     margin: 10px;
 }
-.vision article{
-    width: 50vw;
+.about article, .vision article{
+    text-align: justify;
+    max-width: 50vw;
+}
+#about-us h3{
+    margin: 10px auto;
+    text-align: center;
 }
 @media (max-width: 300px) {
     #about-us img{
@@ -17,7 +23,7 @@
 }
 .about p{
     margin: 0;
-    padding-left: 2rem;
+    /* padding-left: 2rem; */
 }
 .team{
     display: flex;
@@ -45,5 +51,8 @@
     .about, .vision{
         display: flex;
         flex-direction: column;
+    }
+    #about-us article{
+        max-width: 90%;
     }
 }
