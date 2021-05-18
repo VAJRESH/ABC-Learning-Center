@@ -3,6 +3,7 @@ body{
 }
 main{
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
     height: 70vh;
@@ -16,4 +17,9 @@ main button{
     border-radius: 10px;
     font-weight: 500;
     margin-top: 50px;
+}
+@media (max-width: 300px) {
+    img{
+        width: 100%;
+    }
 }

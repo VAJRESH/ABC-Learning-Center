@@ -15,3 +15,15 @@
     width: 50vw;
 }
 
+@media screen and (max-width: 500px) {
+    .map{
+        position: relative;
+        top: auto;
+        right: auto;
+        width: 100%;
+        padding: 10px;
+    }
+    .map img{
+        width: 100%;
+    }
+}

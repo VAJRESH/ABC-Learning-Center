@@ -109,6 +109,7 @@ function lightTheme(){
 // enable users to go back in same order they navigated across the pages
 const backBtn = document.getElementById('back-btn');
 
-backBtn.addEventListener('onclick', () => {
+backBtn.addEventListener('click', () => {
+    console.log('a');
     history.back();
 });

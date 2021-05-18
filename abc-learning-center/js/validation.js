@@ -121,7 +121,7 @@ confirm_password.onchange = () => {
 form.onsubmit = e => {
     e.preventDefault();
     if(errorMessage === null){
-        window.location.href = 'abc-learning-center/thank-you.html';
+        window.location.href = '/thank-you.html';
     } else {
         checkEmptyValues();
     }

@@ -32,17 +32,24 @@ em {
   margin: 1em 0;
 }
 main > section {
-  display: grid;
-  grid-template-columns: auto auto;
+  display: flex;
+  flex-wrap: wrap;
   background-color: var(--light-gray);
   margin: 20px;
   padding: 10px;
+  justify-content: space-evenly;
 }
-
+main:first-child div{
+  margin: 10px;
+}
 img[alt="HTML"] {
-  margin: auto;
-  width: 40vw;
+  margin: 0;
   border: 5px solid black;
+}
+@media screen and (max-width: 300px) {
+  img[alt="HTML"] {
+    width: 100%;
+  }
 }
 
 /* tabs */
@@ -118,8 +125,7 @@ li a {
 
 .instructor-card img {
   border-radius: 50%;
-  width: 200px;
-  height: 200px;
+  width: 60%;
 }
 
 /* user rating */
@@ -193,9 +199,13 @@ li a {
   height: 18px;
   background-color: #f44336;
 }
-
+@media (max-width: 600px) {
+  .heading{
+    display: block;
+  }
+}
 /* Responsive layout - make the columns stack on top of each other instead of next to each other */
-@media (max-width: 400px) {
+@media (max-width: 500px) {
   .side,
   .middle {
     width: 100%;
@@ -204,5 +214,6 @@ li a {
   /* Hide the right column on small screens */
   .right {
     display: none;
+    width: 100%;
   }
 }

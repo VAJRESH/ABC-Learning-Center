@@ -10,6 +10,7 @@ form{
     border-radius: 10px;
     text-align: center;
     box-shadow: 0 0 10px black;
+    margin: auto 10px;
 }
 form fieldset{
     border: transparent;
