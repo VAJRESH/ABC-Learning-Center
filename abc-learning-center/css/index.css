@@ -279,7 +279,7 @@ nav a:hover{
 }
 #course-listing .card-container{
     justify-content: flex-start;
-    width: 100vw;
+    width: 100%;
 } 
 .cards > img{
     width: 100%;
@@ -326,6 +326,8 @@ nav a:hover{
 }
 .courses-section button{
     padding: 10px;
+}
+.courses-section button:not(:disabled){
     background-color: transparent;
     color: var(--text-color);
     border-color: var(--border-color);

@@ -13,6 +13,7 @@ form{
     margin: auto 10px;
 }
 form fieldset{
+    padding: 10px;
     border: transparent;
     outline: transparent;
 }
