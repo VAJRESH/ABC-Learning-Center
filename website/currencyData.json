@@ -1,0 +1,22 @@
+{
+  "data": [
+    {
+      "code": "USD",
+      "name": "US Dollar",
+      "region": "UNITED STATES OF AMERICA",
+      "rate": 1
+    },
+    {
+      "code": "INR",
+      "name": "India Rupees",
+      "region": "INDIA",
+      "rate": 68.98
+    },
+    {
+      "code": "IRR",
+      "name": "Iranian Rial",
+      "region": "IRAN",
+      "rate": 42105.0001
+    }
+  ]
+}
