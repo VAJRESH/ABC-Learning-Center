@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- meta descriptions -->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>ABC Learning Center</title>
+
+    <!-- icon link -->
+    <link rel="icon" href="images/favicon.png" type="image/png" />
+
+    <!-- all style -->
+    <link rel="stylesheet" href="./css/index.css" />
+    <link rel="stylesheet" href="./css/courses.css" />
+
+    <!-- font awesome icons -->
+    <script
+      src="https://kit.fontawesome.com/77ffb54878.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- jquery for tabs -->
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script>
+      $(function () {
+        $("#tabs").tabs();
+      });
+    </script>
+
+    <!-- js file -->
+    <script defer src="./js/index.js"></script>
+  </head>
+  <body>
+    <header id="header">
+        <section class="nav-container">
+            <nav class="navbar">
+                <button class="menu-btn">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <ul class="nav-items">
+                    <a class="nav-link" href="index.html">
+                        <li class="nav-item" id="nav-logo">
+                            <img class="logo" src="./images/favicon.png" alt="Logo" />
+                        </li>
+                    </a>
+                    <a class="nav-link active" href="./index.html">
+                        <li class="nav-item">
+                            Home
+                        </li>
+                    </a>
+                    <a class="nav-link" href="./about-us.html">
+                        <li class="nav-item">
+                            About Us
+                        </li>
+                    </a>
+                    <a class="nav-link" href="./contact-us.html">
+                        <li class="nav-item">
+                            Contact Us
+                        </li>
+                    </a>
+                    <a class="nav-link" href="./course-listing.html">
+                        <li class="nav-item">
+                            Courses
+                        </li>
+                    </a>
+                    <a class="nav-link" href="./site-map.html">
+                        <li class="nav-item">
+                            Sitemap
+                        </li>
+                    </a>
+                    <a class="nav-link" href="./privacy-policy.html">
+                        <li class="nav-item">
+                            Privacy Policy
+                        </li>
+                    </a>
+                </ul>
+                <div class="nav-item">
+                    <button class="nav-link" id="dropdown-btn">Explore</button>
+                    <ul id="dropdown-list" class="list">
+                        <a class="nav-link" href="./course-listing.html#web-dev">
+                            <li>
+                                Web Development
+                            </li>
+                        </a>
+                        <a class="nav-link" href="./course-listing.html#programming-basics">
+                            <li>
+                                Programming Languages 
+                            </li>
+                        </a>
+                        <a class="nav-link" href="./course-listing.html#others">
+                            <li>
+                                Others
+                            </li>
+                        </a>
+                    </ul>
+                </div>
+                <section class="dark-mode-container">
+                    <span class="dark-mode-title">Dark Mode</span>
+                    <label class="toggle-btn">
+                        <input type="checkbox" id="dark-mode-toggle">
+                        <span class="slider"></span>
+                    </label>
+                </section>
+            </nav>
+        </section>
+
+        <h1 class="nav-link" id="home"> ABC Learning Center </h1>
+
+        <button id="back-btn">Back</button>
+
+    </header>
+    <main id="html-course-details">
+      <section>
+        <img src="./images/javascript-basics.jpg" alt="HTML" />
+        <div class="details">
+          <h3>Learn JavaScript From Experts</h3>
+          <p class="instructor">Instructor: Brenden Eich</p>
+          <p class="ratings">
+            <span class="checked">5</span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+          </p>
+          <article class="small-details">
+            <em class="price">
+              <s>&#8377; 5000</s>
+              <span>&#8377; 2500</span>
+              <span class="sale">Sale 50%</span>
+            </em>
+            <em>Conducted on 15 April, 2021</em>
+            <em>Language: English</em>
+          </article>
+          <section>
+            <em>5 Weeks Long</em>
+            <a href="./js-course-schedule.html">
+              <button>Course Schedule</button>
+            </a>
+          </section>
+        </div>
+      </section>
+      <div id="tabs">
+        <ul>
+          <li><a href="#tabs-1">About</a></li>
+          <li><a href="#tabs-2">Details</a></li>
+          <li><a href="#tabs-3">Instructor and Ratings</a></li>
+        </ul>
+        <div id="tabs-1">
+          <section>
+            <h3>Aim</h3>
+            <article>
+              JavaScript is the most popular programming language in the world.
+              It powers the entire modern web. It provides millions of
+              high-paying jobs all over the world.
+              <br />
+              <br />
+              That's why you want to learn JavaScript too. And you came to the
+              right place!
+            </article>
+          </section>
+          <section>
+            <h3>3 in 1 Course</h3>
+            <em>Learn JavaScript, DOM, AJAX</em>
+            <em>Learn ES6 and above</em>
+            <em>Working with API</em>
+          </section>
+          <section>
+            <h3>What you'll learn</h3>
+            <p>Working with a Code Editor</p>
+            <p>Intro of Selection Control Structures</p>
+            <p>
+              How to Create Loops, and Understanding Core Programming
+              Structures.
+            </p>
+          </section>
+          <section>
+            <h3>Requirements</h3>
+            <ul>
+              <li>A computer (Windows, Mac, or Linux) with Internet access</li>
+              <li>
+                Any modern web browser (Chrome, Firefox, Internet Explorer,
+                Opera, or Safari)
+              </li>
+              <li>
+                Some basic computer skills (cutting and pasting text, saving
+                files into folders)
+              </li>
+              <li>A desire to learn!</li>
+            </ul>
+          </section>
+        </div>
+        <div id="tabs-2">
+          <section>
+            <h3>Description</h3>
+            <article>
+              <p>
+                This course introduces the programming language JavaScript and
+                shows the websites that include the type of interactions
+                students will eventually be able to develop. Learners will
+                understand the importance of how JavaScript was developed and
+                why such history impacts the way JavaScript is currently written
+                and in future releases.
+                <br />
+                <br />
+                Learners will write their first scripts, have their HTML and CSS
+                skills assessed, create variables and arrays and assign values
+                to them. If student’s skills are lacking, resources and
+                recommendations are provided to improve these skills. There is
+                ample opportunity for students to practice these first, core
+                skills.
+              </p>
+            </article>
+          </section>
+          <section>
+            <h3>HOW IS THIS COURSE DIFFERENT?</h3>
+            <p>
+              You will learn modern JavaScript from the very beginning,
+              step-by-step. I will guide you through practical and fun code
+              examples, important theory about how JavaScript works behind the
+              scenes, and beautiful and complete projects.
+            </p>
+            <p>
+              You will also learn how to think like a developer, how to plan
+              application features, how to architect your code, how to debug
+              code, and a lot of other real-world skills that you will need on
+              your developer job.
+            </p>
+            <p>
+              And unlike other courses, this one actually contains beginner,
+              intermediate, advanced, and even expert topics, so you don't have
+              to buy any other course in order to master JavaScript from the
+              ground up!
+            </p>
+<p>
+    But... You don't have to go into all these topics. This is a huge
+    course, because, after all, it's <strong>"The Complete JavaScript Course".</strong>
+    In fact, it's like many courses in one! But you can become an
+    excellent developer by watching only parts of the course. That's why
+    I built this course in a very modular way, and designed pathways
+    that will take you through the course faster. 
+</p>
+<p>
+    By the end of the
+    course, you will have the knowledge and confidence that you need in
+    order to ace your job interviews and become a professional
+    developer.
+</p>
+          </section>
+          <section>
+            <h3>Students Response</h3>
+            <h4>
+              Here's just a sample of what my (awesome!) students have to say
+              about this course:
+            </h4>
+            <p>
+                "Best JavaScript course hands down, if you are thinking of getting started with Js, I highly recommend it." —Mihai E.
+            </p>
+            <p>
+                "Phenomenal course. Covers all important topics / areas of JS and doesn't shy away from more advanced concepts / deep dives." —Tony G.
+            </p>
+            <p>
+              "This was a great experience! Never ending with new features , showing all the complexity, this course matched all my expectations and far beyond!" —Tara
+            </p>
+            <p>
+              "What I once thought would be overwhelming to learn is
+              surprisingly quite straight forward." —Odette
+            </p>
+            <p>"This course finally made JavaScript make sense to me." —Julie G.</p>
+            <p>
+              "Thank you, Tim, for a wonderful course! Never thought coding
+              could be made fun." —Leslie V.
+            </p>
+          </section>
+          <section>
+            <h3>WHAT'S INCLUDED?</h3>
+            <ul>
+              <li>
+                Short quizzes at the end of each section will help you gauge
+                your own understanding and check your progress along the way.
+              </li>
+              <li>
+                This course includes lifetime access to 4 hours of step-by-step
+                videos. You'll also get supplementary text lectures, links to
+                helpful resources, HTML and CSS code examples, and downloadable
+                project files.
+              </li>
+            </ul>
+          </section>
+        </div>
+        <div id="tabs-3">
+          <section class="instructor">
+            <h3>Instructor</h3>
+            <div class="instructor-card">
+              <img src="./images/Brendan_Eich.jpg" alt="Tim" />
+              <h4>Brendan Eich</h4>
+              <p>Instructor Rating: <span>5/5</span></p>
+              <h6>Web Developer, Designer, and Teacher</h6>
+              <em>15 Courses</em>
+            </div>
+          </section>
+          <section class="review-section">
+            <h3>
+              <span class="heading">User Rating</span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+            </h3>
+            <p>4.9 average based on 724 reviews.</p>
+            <hr style="border: 3px solid #f1f1f1" />
+
+            <div class="row">
+              <div class="side">
+                <div>5 star</div>
+              </div>
+              <div class="middle">
+                <div class="bar-container">
+                  <div class="bar-5"></div>
+                </div>
+              </div>
+              <div class="side right">
+                <div>620</div>
+              </div>
+              <div class="side">
+                <div>4 star</div>
+              </div>
+              <div class="middle">
+                <div class="bar-container">
+                  <div class="bar-4"></div>
+                </div>
+              </div>
+              <div class="side right">
+                <div>63</div>
+              </div>
+              <div class="side">
+                <div>3 star</div>
+              </div>
+              <div class="middle">
+                <div class="bar-container">
+                  <div class="bar-3"></div>
+                </div>
+              </div>
+              <div class="side right">
+                <div>15</div>
+              </div>
+              <div class="side">
+                <div>2 star</div>
+              </div>
+              <div class="middle">
+                <div class="bar-container">
+                  <div class="bar-1"></div>
+                </div>
+              </div>
+              <div class="side right">
+                <div>20</div>
+              </div>
+              <div class="side">
+                <div>1 star</div>
+              </div>
+              <div class="middle">
+                <div class="bar-container">
+                  <div class="bar-2"></div>
+                </div>
+              </div>
+              <div class="side right">
+                <div>6</div>
+              </div>
+            </div>
+          </section>
+        </div>
+        <div>
+          <a href="./registration-page.html">
+            <button class="buy-button">
+              <span class="price">
+                <span>&#8377; 2500</span>
+              </span>
+              Buy Now
+            </button>
+          </a>
+        </div>
+      </div>
+    </main>
+
+    <footer id="footer">
+        <section class="link-container">
+    <div>
+        <h4 class="link-title">Social Media Handles</h4>
+        <span class="social-icons">
+            <a href="https://twitter.com">
+                <i class="fab fa-twitter"></i>
+                Twitter
+            </a>
+            <a href="https://facebook.com">
+                <i class="fab fa-facebook"></i>
+                Facebook
+            </a>
+            <a href="https://youtube.com">
+                <i class="fab fa-youtube"></i>
+                Youtube
+            </a>
+            <a href="https://instagram.com">
+                <i class="fab fa-instagram"></i>
+                Instagram
+            </a>
+            <a href="https://in.linkedin.com/">
+                <i class="fab fa-linkedin-in"></i>
+                Linked-In
+            </a>
+            <a href="hhttps://discord.com/">
+                <i class="fab fa-discord"></i>
+                Discord
+            </a>
+            <a href="https://web.whatsapp.com/">
+                <i class="fab fa-whatsapp"></i>
+                Whatsapp
+            </a>
+        </span>
+    </div>
+    <div>
+        <h4 class="link-title">Legal</h4>
+        <span class="legal">
+            <a href="privacy-policy.html">Privacy Policy</a>
+            <a href="privacy-policy.html">Terms and Conditions</a>
+        </span>
+    </div>
+</section>
+
+<span class="bottom">
+    <a href="index.html">
+        <img class="logo" src="./images/favicon.png" alt="Logo" />
+        ABC Learning Center
+    </a>
+    <span>@2021 ABC Inc. All rights reserved.</span>
+</span>
+    </footer>
+  </body>
+</html>
