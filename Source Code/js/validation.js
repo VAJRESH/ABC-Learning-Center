@@ -1,12 +1,15 @@
 const form = document.getElementsByTagName('form')[0];
-const first_name = document.getElementById('first-name');
-const last_name = document.getElementById('last-name');
+const firstName = document.getElementById('first-name');
+const lastName = document.getElementById('last-name');
+const dob = document.getElementById('dob');
+const address = document.getElementById('address');
+const phoneNumber = document.getElementById('phone-number');
 const email = document.getElementById('email');
 const password = document.getElementById('password');
-const confirm_password = document.getElementById('confirm-password');
+const confirmPassword = document.getElementById('confirm-password');
 
 const viewPassword = document.querySelectorAll('.viewPasswordBtn');
-
+let isError = [];
 viewPassword.forEach((btn) => {
     btn.addEventListener('mouseover', () => {
         btn.className = 'viewPasswordBtn fas fa-eye';
@@ -19,14 +22,16 @@ viewPassword.forEach((btn) => {
 })
 
 function defaultSettings(){
-    first_name.placeholder = 'John';
-    last_name.placeholder = 'Doe';
+    firstName.placeholder = 'John';
+    lastName.placeholder = 'Doe';
+    address.placeholder = 'Hudson House, Bandra Street, 401221';
+    phoneNumber.placeholder = 8558558855;
     email.placeholder = 'johndoework@gmail.com';
     password.placeholder = 'JohnDoeComplexPassword!@';
-    confirm_password.placeholder = 'JohnDoeComplexPassword!@';
+    confirmPassword.placeholder = 'JohnDoeComplexPassword!@';
 
     password.type = 'password';
-    confirm_password.type = 'password';
+    confirmPassword.type = 'password';
 }
 defaultSettings();
 
@@ -49,108 +54,164 @@ function removeErrorBox(){
     }
 }
 
-first_name.onchange = () => {
-    if(first_name.value === ''){
-        first_name.style.backgroundColor = 'red';
-    } else if(first_name.value.match(/[0-9]/g)){
-        first_name.style.backgroundColor = 'red';
+firstName.onchange = () => {
+    if(firstName.value === ''){
+        firstName.style.border = '2px solid red';
+    } else if(firstName.value.match(/[0-9]/g)){
+        firstName.style.border = '2px solid red';
         errorMessage = 'Don\'t Enter Numbers in Name!';
-        generateErrorBox(first_name.parentNode);
+        generateErrorBox(firstName.parentNode);
     } else{
-        first_name.style.backgroundColor = 'white';
+        firstName.style.border = '';
         removeErrorBox();
     }
 }
-last_name.onchange = () => {
-    if(last_name.value === ''){
-        last_name.style.backgroundColor = 'red';
-    } else if(last_name.value.match(/[0-9]/g)){
-        last_name.style.backgroundColor = 'red';
+lastName.onchange = () => {
+    if(lastName.value === ''){
+        lastName.style.border = '2px solid red';
+    } else if(lastName.value.match(/[0-9]/g)){
+        lastName.style.border = '2px solid red';
         errorMessage = 'Don\'t Enter Numbers in Name!'
-        generateErrorBox(last_name.parentNode);
+        generateErrorBox(lastName.parentNode);
     } else {
-        last_name.style.backgroundColor = 'white';
+        lastName.style.border = '';
         removeErrorBox();
+    }
+}
+address.onchange = () => {
+    if(address.value === ''){
+        address.style.border = '2px solid red';
+    } else{
+        address.style.border = '';
+    }
+}
+dob.onchange = () => {
+    if(dob.value === ''){
+        dob.style.border = '2px solid red';
+    } else{
+        dob.style.border = '';
+    }
+}
+phoneNumber.onchange = () => {
+    if (phoneNumber.value.length === 10) {
+        phoneNumber.style.border = '';
+    } else {
+        phoneNumber.style.border = '2px solid red';
     }
 }
 email.onchange = () => {
     if(email.value === ''){
-        email.style.backgroundColor = 'red';
+        email.style.border = '2px solid red';
     } else if(!email.value.match(/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/g)){
-        email.style.backgroundColor = 'red';
+        email.style.border = '2px solid red';
         errorMessage = 'Enter correct email!';
         generateErrorBox(email.parentNode);
     } else{
-        email.style.backgroundColor = 'white';
+        email.style.border = '';
         removeErrorBox();
     }
 }
 password.onchange = () => {
     if(password.value === ''){
-        password.style.backgroundColor = 'red';
+        password.style.border = '2px solid red';
     } else if(password.value.length < 6){
-        password.style.backgroundColor = 'red';
+        password.style.border = '2px solid red';
         errorMessage = 'Password must contain at least 6 characters!';
         generateErrorBox(password.parentNode);
     } else if(
         !password.value.match(/[!@#$%^&*<>/?\\{}\[\]*()]/g) &&
         !password.value.match(/[0-9]/g)
     ){
-        password.style.backgroundColor = 'red';
+        password.style.border = '2px solid red';
         errorMessage = 'Password must contain at least 1 numeric character and 1 special character!';
         generateErrorBox(password.parentNode);
     } else {
-        password.style.backgroundColor = 'white';
+        password.style.border = '';
         removeErrorBox();
     } 
 }
-confirm_password.onchange = () => {
-    if(confirm_password.value === ''){
-        confirm_password.style.backgroundColor = 'red';
-    } else if(password.value !== confirm_password.value){
-        confirm_password.style.backgroundColor = 'red';
+confirmPassword.onchange = () => {
+    if(confirmPassword.value === ''){
+        confirmPassword.style.border = '2px solid red';
+    } else if(password.value !== confirmPassword.value){
+        confirmPassword.style.border = '2px solid red';
         errorMessage = 'Passwords should match!';
-        generateErrorBox(confirm_password.parentNode);
+        generateErrorBox(confirmPassword.parentNode);
     } else {
         errorMessage = null;
         removeErrorBox();
-        confirm_password.style.backgroundColor = 'white';
+        confirmPassword.style.border = '';
     }
 }
 
-form.onsubmit = e => {
+form.onsubmit = (e) => {
     e.preventDefault();
-    if(errorMessage === null){
-        window.location.href = '/thank-you.html';
+    isError.length = 0;
+    checkEmptyValues();
+    console.log(isError.includes(true), errorMessage);
+    if (errorMessage === null && !isError.includes(true)) {
+        const formData = { ...e.target };
+        const xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+              document.getElementById("demo").innerHTML = this.responseText;
+            }
+          };
+          xhttp.open("POST", "ajax_info.txt", true);
+          xhttp.send(formData);
+        window.location.href = './thank-you.html';
     } else {
-        checkEmptyValues();
+        console.log('no submission');
     }
 }
 
-function checkEmptyValues(){
-    if(first_name.value === ''){
-        first_name.style.backgroundColor = 'red';
+function checkEmptyValues() {
+    if(firstName.value === ''){
+        firstName.style.border = '2px solid red';
+        isError.push(true);
     } else{
-        first_name.style.backgroundColor = 'white';
+        firstName.style.border = '';
     }
-    if(last_name.value === ''){
-        last_name.style.backgroundColor = 'red';
+    if(lastName.value === ''){
+        isError.push(true);
+        lastName.style.border = '2px solid red';
     } else{
-        last_name.style.backgroundColor = 'white';
+        lastName.style.border = '';
+    }
+    if(dob.value === ''){
+        isError.push(true);
+        dob.style.border = '2px solid red';
+    } else{
+        dob.style.border = '';
+    }
+    if(address.value === ''){
+        address.style.border = '2px solid red';
+        isError.push(true);
+    } else{
+        address.style.border = '';
+    }
+    if(phoneNumber.value === ''){
+        isError.push(true);
+        phoneNumber.style.border = '2px solid red';
+    } else{
+        phoneNumber.style.border = '';
     }
     if(email.value === ''){
-        email.style.backgroundColor = 'red';
+        isError.push(true);
+        email.style.border = '2px solid red';
     } else{
-        email.style.backgroundColor = 'white';
+        email.style.border = '';
     }
     if(password.value === ''){
-        password.style.backgroundColor = 'red';
+        isError.push(true);
+        password.style.border = '2px solid red';
     } else{
-        password.style.backgroundColor = 'white';
+        password.style.border = '';
     }
-    if(confirm_password.value === ''){
-        confirm_password.style.backgroundColor = 'red';
+    if(confirmPassword.value === ''){
+        isError.push(true);
+        confirmPassword.style.border = '2px solid red';
     } else{
-        confirm_password.style.backgroundColor = 'white';
+        confirmPassword.style.border = '';
     }
 }
