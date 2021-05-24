@@ -1,5 +1,5 @@
 body{
-    background-color: rgb(227, 234, 240);
+    background-color: var(--bg-color);
 }
 main{
     display: flex;
@@ -8,6 +8,7 @@ main{
     align-items: center;
     height: 70vh;
 }
+
 main > div{
     padding: 3.1rem 1rem;
     text-align: center;
