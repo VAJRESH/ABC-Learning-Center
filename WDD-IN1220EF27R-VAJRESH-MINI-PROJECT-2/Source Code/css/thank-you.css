@@ -1,0 +1,26 @@
+body{
+    background-color: var(--bg-color);
+}
+main{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    height: 70vh;
+}
+
+main > div{
+    padding: 3.1rem 1rem;
+    text-align: center;
+}
+main button{
+    background-color: rgb(82, 247, 41);
+    border-radius: 10px;
+    font-weight: 500;
+    margin-top: 50px;
+}
+@media (max-width: 300px) {
+    img{
+        width: 100%;
+    }
+}

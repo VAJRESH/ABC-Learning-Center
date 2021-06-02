@@ -152,13 +152,13 @@ form.onsubmit = (e) => {
     if (errorMessage === null && !isError.includes(true)) {
         const formData = { ...e.target };
         const xhttp = new XMLHttpRequest();
+        xhttp.open("POST", "action.php", true);
         xhttp.onreadystatechange = function() {
             if (this.readyState == 4 && this.status == 200) {
-              document.getElementById("demo").innerHTML = this.responseText;
+                document.getElementById("demo").innerHTML = this.responseText;
             }
-          };
-          xhttp.open("POST", "ajax_info.txt", true);
-          xhttp.send(formData);
+        };
+        xhttp.send(formData);
         window.location.href = './thank-you.html';
     } else {
         console.log('no submission');
